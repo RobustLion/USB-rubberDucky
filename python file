@@ -1,0 +1,53 @@
+import curses
+import random
+import time
+
+def hacker_design(stdscr):
+    # Initialize color
+    curses.start_color()
+    curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
+    
+    # Hide the cursor
+    curses.curs_set(0)
+    
+    # Get screen height and width
+    sh, sw = stdscr.getmaxyx()
+    
+    # Create an array for each column to track the position of the falling characters
+    columns = [random.randint(0, sh-1) for _ in range(sw)]  # Randomize starting point
+    line_lengths = [random.randint(5, 15) for _ in range(sw)]  # Randomize line lengths
+
+    # Track the start time
+    start_time = time.time()
+
+    # Main loop
+    while True:
+        stdscr.clear()
+        
+        for i in range(sw):
+            if random.randint(0, 10) > 2:  # Control speed of falling lines
+                for j in range(line_lengths[i]):  # Create a line of falling characters
+                    char = chr(random.randint(33, 126))  # Random ASCII character
+                    position_y = (columns[i] - j) % sh  # Keep the line within the screen bounds
+                    stdscr.addch(position_y, i, char, curses.color_pair(1))  # Add character
+
+            # Move the column down
+            columns[i] += 1
+            if columns[i] >= sh:  # Reset the position to the top if it reaches the bottom
+                columns[i] = 0
+                line_lengths[i] = random.randint(5, 15)  # Randomize new line length when it resets
+
+        stdscr.refresh()  # Refresh screen
+        
+        # Exit the loop after 5 seconds
+        if time.time() - start_time >= 90:
+            break
+
+        time.sleep(0.05)  # Slow down the loop slightly
+
+# Wrapper function to handle initialization and teardown
+def main():
+    curses.wrapper(hacker_design)
+
+if __name__ == "__main__":
+    main()
