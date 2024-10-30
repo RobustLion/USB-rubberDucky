@@ -4,7 +4,7 @@ Option Explicit
 
 
 Dim filePath
-filePath = "alien.py"  ' Specify your file path here
+filePath = "alien.py"  ' Specify file path here
 
 ' Create a WScript Shell object
 Set objShell = CreateObject("WScript.Shell")
@@ -17,7 +17,7 @@ Set objShell = Nothing
 
 
 
-filePath = "alien.py"  ' Specify your file path here
+filePath = "alien.py"  ' Specify file path here
 
 ' Create a WScript Shell object
 Set objShell = CreateObject("WScript.Shell")
@@ -42,7 +42,7 @@ Set objShell = Nothing
 
 WScript.Sleep 500
 
-filePath = "alien2.py"  ' Specify your file path here
+filePath = "alien2.py"  ' Specify file path here
 
 ' Create a WScript Shell object
 Set objShell = CreateObject("WScript.Shell")
@@ -55,7 +55,7 @@ Set objShell = Nothing
 
 
 
-filePath = "alien2.py"  ' Specify your file path here
+filePath = "alien2.py"  ' Specify file path here
 
 ' Create a WScript Shell object
 Set objShell = CreateObject("WScript.Shell")
@@ -67,48 +67,7 @@ objShell.Run Chr(34) & filePath & Chr(34)
 Set objShell = Nothing
 
 
-filePath = "alien2.py"  ' Specify your file path here
-
-' Create a WScript Shell object
-Set objShell = CreateObject("WScript.Shell")
-
-' Open the file
-objShell.Run Chr(34) & filePath & Chr(34)
-
-' Clean up
-Set objShell = Nothing
-
-
-WScript.Sleep 500
-
-
-
-filePath = "alien3.py"  ' Specify your file path here
-
-' Create a WScript Shell object
-Set objShell = CreateObject("WScript.Shell")
-
-' Open the file
-objShell.Run Chr(34) & filePath & Chr(34)
-
-' Clean up
-Set objShell = Nothing
-
-
-
-filePath = "alien3.py"  ' Specify your file path here
-
-' Create a WScript Shell object
-Set objShell = CreateObject("WScript.Shell")
-
-' Open the file
-objShell.Run Chr(34) & filePath & Chr(34)
-
-' Clean up
-Set objShell = Nothing
-
-
-filePath = "alien3.py"  ' Specify your file path here
+filePath = "alien2.py"  ' Specify file path here
 
 ' Create a WScript Shell object
 Set objShell = CreateObject("WScript.Shell")
@@ -123,7 +82,8 @@ Set objShell = Nothing
 WScript.Sleep 500
 
 
-filePath = "alien4.py"  ' Specify your file path here
+
+filePath = "alien3.py"  ' Specify file path here
 
 ' Create a WScript Shell object
 Set objShell = CreateObject("WScript.Shell")
@@ -136,7 +96,7 @@ Set objShell = Nothing
 
 
 
-filePath = "alien4.py"  ' Specify your file path here
+filePath = "alien3.py"  ' Specify file path here
 
 ' Create a WScript Shell object
 Set objShell = CreateObject("WScript.Shell")
@@ -148,7 +108,47 @@ objShell.Run Chr(34) & filePath & Chr(34)
 Set objShell = Nothing
 
 
-filePath = "alien4.py"  ' Specify your file path here
+filePath = "alien3.py"  ' Specify file path here
+
+' Create a WScript Shell object
+Set objShell = CreateObject("WScript.Shell")
+
+' Open the file
+objShell.Run Chr(34) & filePath & Chr(34)
+
+' Clean up
+Set objShell = Nothing
+
+
+WScript.Sleep 500
+
+
+filePath = "alien4.py"  ' Specify file path here
+
+' Create a WScript Shell object
+Set objShell = CreateObject("WScript.Shell")
+
+' Open the file
+objShell.Run Chr(34) & filePath & Chr(34)
+
+' Clean up
+Set objShell = Nothing
+
+
+
+filePath = "alien4.py"  ' Specify file path here
+
+' Create a WScript Shell object
+Set objShell = CreateObject("WScript.Shell")
+
+' Open the file
+objShell.Run Chr(34) & filePath & Chr(34)
+
+' Clean up
+Set objShell = Nothing
+
+
+filePath = "alien4.py"  ' Specify file path here
 
 ' Create a WScript Shell object
 Set objShell = CreateObject("WScript.Shell")
